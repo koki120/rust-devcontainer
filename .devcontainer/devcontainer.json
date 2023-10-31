@@ -1,0 +1,37 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/rust
+{
+	"name": "Rust",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/rust:0-1-bullseye",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"configureZshAsDefaultShell": "true",
+			"username": "rust-dev",
+			"upgradePackages": "true"
+		}
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"ms-vscode.anycode-rust"
+			]
+		}
+	},
+
+	// コンテナ名をつける
+	"runArgs": ["--name", "rust-dev"],
+
+	// volumeに名前を付ける & volumeに保存
+	"mounts": [
+		"source=${localWorkspaceFolderBasename},target=${containerWorkspaceFolder},type=volume"
+	],
+
+    "remoteUser": "rust-dev"
+
+}
