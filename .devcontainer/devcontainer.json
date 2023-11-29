@@ -3,13 +3,12 @@
 {
 	"name": "Rust",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/rust:0-1-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/rust",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
 			"installZsh": "true",
 			"configureZshAsDefaultShell": "true",
-			"username": "rust-dev",
 			"upgradePackages": "true"
 		}
 	},
@@ -27,11 +26,6 @@
 	// コンテナ名をつける
 	"runArgs": ["--name", "rust-dev"],
 
-	// volumeに名前を付ける & volumeに保存
-	"mounts": [
-		"source=${localWorkspaceFolderBasename},target=${containerWorkspaceFolder},type=volume"
-	],
-
-    "remoteUser": "rust-dev"
+    "remoteUser": "vscode"
 
 }
