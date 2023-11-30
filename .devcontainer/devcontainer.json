@@ -19,7 +19,10 @@
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
 				"ms-vscode.anycode-rust",
-				"ms-vscode.cpptools-extension-pack"
+				"ms-vscode.cpptools-extension-pack",
+				"twxs.cmake",
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-themes"
 			]
 		}
 	},
