@@ -18,7 +18,8 @@
 		"vscode": {
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
-				"ms-vscode.anycode-rust"
+				"ms-vscode.anycode-rust",
+				"ms-vscode.cpptools-extension-pack"
 			]
 		}
 	},
